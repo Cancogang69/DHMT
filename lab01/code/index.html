@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Type" content="text/html; charset = UTF-8">
-  <title>DDA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>DAA</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">DDA Algorithm</h1>
-      <h3 class="author">Tue</h3>
-    </div>
-    <p class="ESC">ESC</p>
-
-    <div class="maincontainer">
-      <canvas id="canvas">
-
-      </canvas>
-    </div>
-
-    <div class="button">
-      <button id="reset">
-
-      </button>
-    </div>
-
-    <script type="text/javascript" src="src/dda.js"></script>
+<div class="container">
+  <div class="header">
+    <h1>Bài thực hành 1</h1>
+    <h1>Nguyễn Đức Tuệ - 21521644</h1>
   </div>
+  <main>
+    <select id="algorithmSelector">
+      <option value="daa">DDA</option>
+      <option value="bresenham">Bresenham</option>
+      <option value="midpoint">MidPoint</option>
+    </select>
+
+    <div class="buttons">
+      <button id="reset">Reset</button>
+    </div>
+
+    <canvas id="canvas" ></canvas>
+  </main>
+</div>
+
+<script type="module">
+  import Painter from "./src/main.js" ;
+  document.addEventListener('DOMContentLoaded', () => {
+  const painter = new Painter();
+  });
+</script>
 </body>
 </html>
